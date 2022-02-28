@@ -2,14 +2,16 @@ import React from 'react';
 import Layout from '../components/layout'
 import RecipesList from '../components/RecipesList';
 import { useStaticQuery, graphql } from 'gatsby';
+import SEO from "../components/SEO"
 const Contact = ({ data }) => {
     const recipes = data.allContentfulRecipe.nodes
     return (
         <Layout>
+            <SEO title='kontakt' description="contact" />
             <main className="page">
                 <section className="contact-page">
                     <article className="contact-info">
-                        <h3>Need to get in touch?</h3>
+                        <h3>Potrzebujesz kontaktu?</h3>
                         <p>Nulla reprehenderit Lorem nisi est non Lorem id nostrud aliqua consectetur. In reprehenderit duis elit amet irure ipsum.
                         </p>
                         <p>
@@ -23,24 +25,23 @@ const Contact = ({ data }) => {
                     <article>
                         <form className='form contact-form'>
                             <div className='form-row'>
-                                <label htmlFor='name'>Your name</label>
-                                <input type='text'></input>
+                                <label htmlFor='name'>Twoje imię</label>
+                                <input required type='text'></input>
                             </div>
                             <div className='form-row'>
-                                <label htmlFor='email'>Your email</label>
-                                <input type='text' name='email' id='email'></input>
+                                <label htmlFor='email'>Twój email</label>
+                                <input type='text' name='email' id='email' required></input>
                             </div>
                             <div className='form-row'>
-                                <label htmlFor='message'>message</label>
-                                <textarea name='message' id='message'></textarea>
+                                <label htmlFor='message'>wiadomość</label>
+                                <textarea name='message' id='message' required></textarea>
                             </div>
-                            <button type='submit' className='btn block'>submit</button>
+                            <button type='submit' className='btn block'>wyślij</button>
                         </form>
 
                     </article>
                 </section>
                 <section className="featured-recipes">
-                    <h5>Look at this Awesomesouce!</h5>
                     <RecipesList recipes={recipes} />
                 </section>
             </main>
@@ -57,7 +58,7 @@ export const query = graphql`
     nodes {
       id
       title
-      cookTime
+      workTime
       prepTime
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)

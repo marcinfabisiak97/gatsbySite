@@ -13,14 +13,14 @@ const About = ({
 
   return (
     <Layout>
-      <SEO title='about' />
+      <SEO title='o nas' />
       <main className='page'>
         <section className='about-page'>
           <article>
             <h2>Esse ex occaecat id magna consequat et esse eiusmod.</h2>
             <p>Sunt minim enim consectetur voluptate irure consequat cupidatat sit deserunt nostrud excepteur eu labore. Quis laborum occaecat pariatur anim commodo cupidatat eiusmod. Veniam ut laborum eiusmod ullamco non fugiat officia velit culpa reprehenderit.</p>
             <p>Id incididunt minim consectetur laboris aute Lorem incididunt ad minim ad nostrud labore tempor voluptate.</p>
-            <Link to='/contact' className='brn'>contact</Link>
+            <Link to='/contact' className='brn'>kontakt</Link>
           </article>
           <StaticImage
 
@@ -31,7 +31,6 @@ const About = ({
           />
         </section>
         <section className="featured-recipes">
-          <h5>Look at this Awesomesouce!</h5>
           <RecipesList recipes={recipes} />
         </section>
       </main>
@@ -48,7 +47,7 @@ export const query = graphql`
     nodes {
       id
       title
-      cookTime
+      workTime
       prepTime
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)

@@ -16,41 +16,27 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className={show ? "nav-links show-links" : "nav-links"}>
-                    <Link
-                        to="/"
-                        className="nav-link"
-                        activeClassName="active-link"
-                        onClick={() => setShow(false)}
-                    >
-                        home
-                    </Link>
-                    <Link
-                        to="/recipes"
-                        className="nav-link"
-                        activeClassName="active-link"
-                        onClick={() => setShow(false)}
-                    >
-                        recipes
-                    </Link>
-                    <Link
-                        to="/tags"
-                        className="nav-link"
-                        activeClassName="active-link"
-                        onClick={() => setShow(false)}
-                    >
-                        tags
-                    </Link>
-                    <Link
-                        to="/about"
-                        className="nav-link"
-                        activeClassName="active-link"
-                        onClick={() => setShow(false)}
-                    >
-                        about
-                    </Link>
+                    <div className="nav-linker">
+                        <Link
+                            to="/"
+                            className="nav-link"
+                            activeClassName="active-link"
+                            onClick={() => setShow(false)}
+                        >
+                            Strona Główna
+                        </Link>
+                        <Link
+                            to="/about"
+                            className="nav-link"
+                            activeClassName="active-link"
+                            onClick={() => setShow(false)}
+                        >
+                            O nas
+                        </Link>
+                    </div>
                     <div className="nav-link contact-link">
                         <Link to="/contact" className="btn" onClick={() => setShow(false)}>
-                            contact
+                            Kontakt
                         </Link>
                     </div>
                 </div>
